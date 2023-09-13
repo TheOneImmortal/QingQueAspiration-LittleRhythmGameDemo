@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpvnbb0kmbibp"]
+
+[ext_resource type="Script" path="res://StartMenu/options_information.gd" id="1_f8jyp"]
+
+[node name="OptionsInformation" type="CanvasLayer"]
+script = ExtResource("1_f8jyp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 626.0
+offset_bottom = 240.0
+color = Color(0, 0, 0, 0.568627)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 577.0
+offset_top = 9.0
+offset_right = 617.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 15
+text = "关闭"
+
+[node name="MainVolume" type="HScrollBar" parent="."]
+offset_left = 290.0
+offset_top = 99.0
+offset_right = 577.0
+offset_bottom = 120.0
+
+[node name="LabelMainVolume" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 83.0
+offset_right = 144.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 32
+text = "主音量"
+
+[node name="LabelMainVolumeValue" type="Label" parent="."]
+offset_left = 190.0
+offset_top = 84.0
+offset_right = 272.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 32
+text = "100%"
+
+[node name="LabelEffectVolume" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 145.0
+offset_right = 177.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 32
+text = "效果音量"
+
+[node name="LabelEffectVolumeValue" type="Label" parent="."]
+offset_left = 189.0
+offset_top = 146.0
+offset_right = 271.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 32
+text = "100%"
+
+[node name="EffectVolume" type="HScrollBar" parent="."]
+offset_left = 288.0
+offset_top = 158.0
+offset_right = 575.0
+offset_bottom = 179.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

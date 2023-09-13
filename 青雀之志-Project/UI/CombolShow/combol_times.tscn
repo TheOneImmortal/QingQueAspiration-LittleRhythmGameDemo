@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://csex7b4qn7g2m"]
+
+[ext_resource type="LabelSettings" uid="uid://b1w8mo15x7ar4" path="res://UI/CombolShow/combol.tres" id="1_e7b2l"]
+[ext_resource type="Script" path="res://UI/CombolShow/combol_times.gd" id="1_qhudx"]
+[ext_resource type="LabelSettings" uid="uid://dmu35vja2b02w" path="res://UI/CombolShow/combol_times.tres" id="2_mgof8"]
+
+[node name="Combol Times" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 297.0
+offset_bottom = 82.0
+script = ExtResource("1_qhudx")
+
+[node name="Combol" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Combol"
+label_settings = ExtResource("1_e7b2l")
+horizontal_alignment = 2
+vertical_alignment = 2
+clip_text = true
+max_lines_visible = 1
+language = "zh_CN"
+
+[node name="Combol Times" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = " 0 "
+label_settings = ExtResource("2_mgof8")
+vertical_alignment = 2
+clip_text = true
+max_lines_visible = 1
+language = "zh_CN"

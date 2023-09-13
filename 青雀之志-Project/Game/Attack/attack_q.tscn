@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo4yudwfcbv8k"]
+
+[ext_resource type="Texture2D" uid="uid://21tc555pq7mn" path="res://Game/E/Images/青雀Q.png" id="1_xb5nk"]
+
+[node name="AttackQ" type="Node2D"]
+
+[node name="青雀q" type="Sprite2D" parent="."]
+position = Vector2(-1, -7)
+texture = ExtResource("1_xb5nk")

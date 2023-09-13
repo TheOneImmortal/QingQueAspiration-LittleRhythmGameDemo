@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://ob4wd61tlast"]
+
+[ext_resource type="Script" path="res://StartMenu/hud.gd" id="1_mvph2"]
+[ext_resource type="AudioStream" uid="uid://dv8eymkq4drsg" path="res://art/test009-C.wav" id="2_taqru"]
+[ext_resource type="AudioStream" uid="uid://dhx1647u05ygg" path="res://art/test013-D.wav" id="3_y3ms6"]
+[ext_resource type="AudioStream" uid="uid://rrcn7vhpd0j5" path="res://art/test014-E.wav" id="4_qe8vw"]
+[ext_resource type="AudioStream" uid="uid://8edpllvv0jpw" path="res://art/test015-F.wav" id="5_iocqe"]
+[ext_resource type="AudioStream" uid="uid://c0kl15p1kos6t" path="res://art/test010-C-down.wav" id="6_ov52c"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_mvph2")
+
+[node name="AudioC" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_taqru")
+
+[node name="AudioD" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_y3ms6")
+
+[node name="AudioE" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qe8vw")
+
+[node name="AudioF" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_iocqe")
+
+[node name="AudioDownC" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ov52c")
+
+[node name="ButtonStartGame" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 54
+text = "开始游戏"
+
+[node name="ButtonOptions" type="Button" parent="."]
+offset_top = 90.0
+offset_right = 224.0
+offset_bottom = 172.0
+theme_override_font_sizes/font_size = 54
+text = "游戏设置"
+
+[node name="ButtonAbout" type="Button" parent="."]
+offset_top = 180.0
+offset_right = 224.0
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 54
+text = "关于我们"
+
+[node name="ButtonQuit" type="Button" parent="."]
+offset_top = 270.0
+offset_right = 224.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 54
+text = "退出游戏"
+
+[connection signal="pressed" from="ButtonStartGame" to="." method="_on_button_start_game_pressed"]
+[connection signal="pressed" from="ButtonOptions" to="." method="_on_button_options_pressed"]
+[connection signal="pressed" from="ButtonAbout" to="." method="_on_button_about_pressed"]
+[connection signal="button_down" from="ButtonQuit" to="." method="_on_button_quit_button_down"]

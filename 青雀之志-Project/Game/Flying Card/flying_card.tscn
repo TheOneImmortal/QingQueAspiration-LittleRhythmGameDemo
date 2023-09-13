@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv53akp51mxvw"]
+
+[ext_resource type="Script" path="res://Game/Flying Card/flying_card.gd" id="1_nybcx"]
+
+[node name="Flying Card" type="Node2D"]
+script = ExtResource("1_nybcx")

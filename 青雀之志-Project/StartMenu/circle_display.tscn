@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ha1ptrwe72au"]
+
+[ext_resource type="Script" path="res://StartMenu/circle_display.gd" id="1_rjmpx"]
+
+[node name="CircleDisplay" type="Node2D"]
+script = ExtResource("1_rjmpx")

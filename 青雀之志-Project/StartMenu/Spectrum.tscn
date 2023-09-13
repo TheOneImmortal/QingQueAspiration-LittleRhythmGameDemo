@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://qxxby1dl15ee"]
+
+[ext_resource type="Script" path="res://StartMenu/Spectrum.gd" id="1_lly3j"]
+[ext_resource type="PackedScene" uid="uid://ha1ptrwe72au" path="res://StartMenu/circle_display.tscn" id="2_b61iq"]
+[ext_resource type="AudioStream" uid="uid://c75s6ga1dbl50" path="res://art/StartMenuMusic.ogg" id="2_nrxmn"]
+
+[node name="Spectrum" type="Node2D"]
+script = ExtResource("1_lly3j")
+
+[node name="CircleDisplay" parent="." instance=ExtResource("2_b61iq")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nrxmn")
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

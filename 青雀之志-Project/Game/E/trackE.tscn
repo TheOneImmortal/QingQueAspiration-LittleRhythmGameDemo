@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://ybi47fnar2uu"]
+
+[ext_resource type="Script" path="res://Game/E/track.gd" id="1_pbarn"]
+[ext_resource type="Texture2D" uid="uid://b1rvh7w0dyexx" path="res://Game/圆.png" id="2_87466"]
+[ext_resource type="Texture2D" uid="uid://4rivbeuo7o8f" path="res://Game/E/Images/E环.png" id="3_4d2wj"]
+[ext_resource type="Texture2D" uid="uid://b543nxhao27oc" path="res://Game/E/Images/光环.png" id="3_6x6aq"]
+[ext_resource type="PackedScene" uid="uid://2enfwpgedqf" path="res://Game/E/BoomRings/boom_rings.tscn" id="3_augal"]
+[ext_resource type="Texture2D" uid="uid://cuj76asmtfalm" path="res://Game/E/Images/E.png" id="5_nh24l"]
+
+[node name="The E" type="Node2D"]
+script = ExtResource("1_pbarn")
+motion_miss_lighting_color = Color(0.117647, 0.117647, 0.117647, 1)
+metadata/_edit_horizontal_guides_ = [-198.0, -98.0]
+metadata/_edit_vertical_guides_ = [-198.0, -98.0]
+
+[node name="Lighting" type="Sprite2D" parent="."]
+modulate = Color(1.3, 1.3, 1.3, 1)
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("2_87466")
+
+[node name="Boom Rings" parent="." instance=ExtResource("3_augal")]
+modulate = Color(1.25, 1.25, 1.25, 1)
+
+[node name="Ioside Range" type="Node2D" parent="."]
+
+[node name="Ioside Range" type="Sprite2D" parent="Ioside Range"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+scale = Vector2(0.620217, 0.620217)
+texture = ExtResource("3_6x6aq")
+
+[node name="Check E" type="Node2D" parent="."]
+
+[node name="Check E" type="Sprite2D" parent="Check E"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+scale = Vector2(0.608155, 0.608155)
+texture = ExtResource("3_4d2wj")
+
+[node name="Lighting Dumbeats" type="Node2D" parent="."]
+
+[node name="Drumbeats" type="Node2D" parent="."]
+
+[node name="E" type="Node2D" parent="."]
+
+[node name="E" type="Sprite2D" parent="E"]
+modulate = Color(1.1, 1.1, 1.1, 1)
+scale = Vector2(0.651577, 0.651577)
+texture = ExtResource("5_nh24l")

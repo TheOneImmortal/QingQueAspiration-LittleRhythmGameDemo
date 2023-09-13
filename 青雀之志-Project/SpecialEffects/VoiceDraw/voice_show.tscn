@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch8ioe2jbkfct"]
+
+[ext_resource type="Script" path="res://SpecialEffects/VoiceDraw/Spectrum.gd" id="1_3nxbu"]
+
+[node name="VoiceShow" type="Node2D"]
+script = ExtResource("1_3nxbu")

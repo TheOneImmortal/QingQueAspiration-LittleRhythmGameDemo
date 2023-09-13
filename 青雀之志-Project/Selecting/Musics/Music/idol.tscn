@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://crgcewematfpp"]
+
+[ext_resource type="PackedScene" uid="uid://n0cr26ayaas6" path="res://Selecting/Musics/Music/让风告诉你.tscn" id="1_bty01"]
+[ext_resource type="JSON" path="res://Music/Music/idol.json" id="2_qm6aq"]
+[ext_resource type="Texture2D" uid="uid://b7riuok5f24ox" path="res://art/Ai01.jpg" id="2_xm2tr"]
+
+[node name="Idol" instance=ExtResource("1_bty01")]
+music_json = ExtResource("2_qm6aq")
+
+[node name="Image" parent="Panel" index="0"]
+texture = ExtResource("2_xm2tr")
+offset = Vector2(200, 20)

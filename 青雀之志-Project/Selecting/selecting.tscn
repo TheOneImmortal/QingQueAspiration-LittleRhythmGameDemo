@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp1kno8y20hic"]
+
+[ext_resource type="Script" path="res://Selecting/selecting.gd" id="1_4fy01"]
+[ext_resource type="PackedScene" uid="uid://c7otnh1hbv8bp" path="res://Selecting/Musics/music_cards.tscn" id="2_gli2o"]
+[ext_resource type="AudioStream" uid="uid://8edpllvv0jpw" path="res://art/test015-F.wav" id="3_i8klq"]
+[ext_resource type="AudioStream" uid="uid://c0kl15p1kos6t" path="res://art/test010-C-down.wav" id="4_i4e7m"]
+
+[node name="Selecting" type="Node2D"]
+script = ExtResource("1_4fy01")
+
+[node name="MusicCards" parent="." instance=ExtResource("2_gli2o")]
+position = Vector2(200, 400)
+scale = Vector2(0.758754, 0.758754)
+
+[node name="AudioDownC" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_i4e7m")
+
+[node name="AudioF" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i8klq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 61.0
+offset_right = 256.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "点击选择关卡"
+metadata/_edit_group_ = true
+
+[node name="ButtonReturn" type="Button" parent="."]
+offset_left = 1060.0
+offset_top = 20.0
+offset_right = 1132.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 32
+text = "返回"
+
+[connection signal="select_music" from="MusicCards" to="." method="_on_music_cards_select_music"]
+[connection signal="select_music" from="MusicCards" to="MusicCards" method="_on_select_music"]
+[connection signal="pressed" from="ButtonReturn" to="." method="_on_button_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1hb5aps3pjdd"]
+
+[ext_resource type="PackedScene" uid="uid://n4kqehq6bgbd" path="res://Selecting/Musics/Music/music_card.tscn" id="1_bs10s"]
+[ext_resource type="JSON" path="res://Music/Music/踏上旅途.json" id="2_jdlaf"]
+
+[node name="OnJourney" instance=ExtResource("1_bs10s")]
+music_json = ExtResource("2_jdlaf")
+
+[node name="Image" parent="Panel" index="0"]
+position = Vector2(49, 325)
+scale = Vector2(0.84768, 0.84768)

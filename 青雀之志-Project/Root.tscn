@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://djkcba0e76t8o"]
+
+[ext_resource type="Script" path="res://Root.gd" id="1_d47o3"]
+[ext_resource type="PackedScene" uid="uid://bie8awiixob7t" path="res://StartMenu/start_menu.tscn" id="3_8jker"]
+[ext_resource type="Script" path="res://Sets.gd" id="3_vc81x"]
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_d47o3")
+
+[node name="Sets" type="Node" parent="."]
+script = ExtResource("3_vc81x")
+
+[node name="Scenes" type="Node2D" parent="."]
+
+[node name="StartMenu" parent="Scenes" instance=ExtResource("3_8jker")]

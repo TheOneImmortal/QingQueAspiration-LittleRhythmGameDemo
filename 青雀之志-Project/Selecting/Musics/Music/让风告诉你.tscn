@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://n0cr26ayaas6"]
+
+[ext_resource type="PackedScene" uid="uid://n4kqehq6bgbd" path="res://Selecting/Musics/Music/music_card.tscn" id="1_0dm11"]
+[ext_resource type="JSON" path="res://Music/Music/让风告诉你.json" id="2_0c5le"]
+[ext_resource type="Texture2D" uid="uid://c4fwtfof20laq" path="res://Music/Png/让风告诉你.png" id="3_bgkc2"]
+
+[node name="WindTellTou" instance=ExtResource("1_0dm11")]
+music_json = ExtResource("2_0c5le")
+
+[node name="Image" parent="Panel" index="0"]
+position = Vector2(58, 322)
+scale = Vector2(0.626687, 0.626687)
+texture = ExtResource("3_bgkc2")
+offset = Vector2(-70, -20)

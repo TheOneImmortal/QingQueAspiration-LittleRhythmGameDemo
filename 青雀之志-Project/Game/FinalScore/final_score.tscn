@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://daw3b5dasvsgr"]
+
+[node name="FinalScore" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 376.0
+offset_bottom = 217.0
+color = Color(0, 0, 0, 0.568627)
+
+[node name="LabelMaxCombol" type="Label" parent="."]
+offset_left = 21.0
+offset_top = 80.0
+offset_right = 213.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 32
+text = "最大连击数："
+
+[node name="LabelScore" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 26.0
+offset_right = 146.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 32
+text = "总得分："
+
+[node name="LabelExit" type="Label" parent="."]
+offset_left = 196.0
+offset_top = 156.0
+offset_right = 336.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 20
+text = "按 Esc 退出 ......"

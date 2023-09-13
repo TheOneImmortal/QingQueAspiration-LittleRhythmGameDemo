@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2ljrr1ywg7ss"]
+
+[ext_resource type="Texture2D" uid="uid://curgvbm3vbsll" path="res://Game/Mahjong/Card/牌A.png" id="1_6sctj"]
+[ext_resource type="Script" path="res://Game/Mahjong/Card/card.gd" id="1_vwcqb"]
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_vwcqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(0.179568, 0.179568)
+texture = ExtResource("1_6sctj")

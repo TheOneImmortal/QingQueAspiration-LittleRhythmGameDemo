@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7otnh1hbv8bp"]
+
+[ext_resource type="Script" path="res://Selecting/Musics/music_cards.gd" id="1_wuc7s"]
+[ext_resource type="PackedScene" uid="uid://b1hb5aps3pjdd" path="res://Selecting/Musics/Music/踏上旅途.tscn" id="2_jilg7"]
+[ext_resource type="PackedScene" uid="uid://n0cr26ayaas6" path="res://Selecting/Musics/Music/让风告诉你.tscn" id="3_qjfcb"]
+[ext_resource type="PackedScene" uid="uid://crgcewematfpp" path="res://Selecting/Musics/Music/idol.tscn" id="4_t2uav"]
+
+[node name="MusicCards" type="Node2D"]
+scale = Vector2(1, 0.994498)
+script = ExtResource("1_wuc7s")
+
+[node name="OnJournel" parent="." instance=ExtResource("2_jilg7")]
+
+[node name="WindTellYou" parent="." instance=ExtResource("3_qjfcb")]
+position = Vector2(446, 0)
+
+[node name="Idol" parent="." instance=ExtResource("4_t2uav")]
+position = Vector2(892, 0)

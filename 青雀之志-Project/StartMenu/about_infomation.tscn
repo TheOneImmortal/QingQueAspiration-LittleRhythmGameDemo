@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcmc2po7fhjyc"]
+
+[ext_resource type="Script" path="res://StartMenu/about_infomation.gd" id="1_2fx8s"]
+
+[node name="AboutInfomation" type="CanvasLayer"]
+script = ExtResource("1_2fx8s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 630.0
+offset_bottom = 490.0
+color = Color(0, 0, 0, 0.568627)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 11.0
+offset_right = 619.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 15
+text = "关闭"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 25.0
+offset_right = 543.0
+offset_bottom = 334.0
+theme_override_font_sizes/font_size = 30
+text = "作者：
+  JLU CS 2020：马昭、郭冠男
+
+分工：
+  主程序员：马昭（华丽粒子特效）
+  音效美工：郭冠男（频谱分析显示）
+
+学号：
+  21200723 马昭
+  21200612 郭冠男
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

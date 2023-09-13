@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn2ufcwnjxgfs"]
+
+[ext_resource type="Script" path="res://Game/E/BoomRings/BoomRing/boom_ring.gd" id="1_0tywg"]
+[ext_resource type="Texture2D" uid="uid://db24n5nktu46k" path="res://Game/E/Images/薄环.png" id="1_bjca2"]
+
+[node name="BoomRing" type="Node2D"]
+script = ExtResource("1_0tywg")
+
+[node name="薄环" type="Sprite2D" parent="."]
+scale = Vector2(0.620217, 0.620217)
+texture = ExtResource("1_bjca2")

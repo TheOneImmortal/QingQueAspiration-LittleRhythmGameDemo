@@ -1,0 +1,157 @@
+[gd_scene load_steps=20 format=3 uid="uid://bie8awiixob7t"]
+
+[ext_resource type="Script" path="res://StartMenu/start_menu.gd" id="1_0ygfb"]
+[ext_resource type="Texture2D" uid="uid://bo77j5oh6ok5o" path="res://art/Shizuku01.jpg" id="3_4ihmx"]
+[ext_resource type="Texture2D" uid="uid://b4r6y1a56qo5b" path="res://art/Nacho01.jpg" id="3_y0eh4"]
+[ext_resource type="Script" path="res://StartMenu/Nacho01Sprite.gd" id="4_4s7u5"]
+[ext_resource type="Script" path="res://StartMenu/Shizuku01Sprite.gd" id="5_w8nyp"]
+[ext_resource type="Texture2D" uid="uid://b7riuok5f24ox" path="res://art/Ai01.jpg" id="6_kx5dy"]
+[ext_resource type="Script" path="res://StartMenu/Ai01Sprite.gd" id="7_726o7"]
+[ext_resource type="PackedScene" uid="uid://ob4wd61tlast" path="res://StartMenu/hud.tscn" id="8_5l78w"]
+[ext_resource type="Texture2D" uid="uid://dsmpwr4uildl2" path="res://art/青雀之志.png" id="9_mgcqa"]
+[ext_resource type="Script" path="res://StartMenu/TitlePng.gd" id="10_af0ry"]
+[ext_resource type="PackedScene" uid="uid://qxxby1dl15ee" path="res://StartMenu/Spectrum.tscn" id="10_mcp7e"]
+[ext_resource type="Texture2D" uid="uid://dxkfdb28gxdyv" path="res://art/壁纸.jpg" id="11_c7jko"]
+[ext_resource type="PackedScene" uid="uid://dcmc2po7fhjyc" path="res://StartMenu/about_infomation.tscn" id="13_b71ts"]
+[ext_resource type="PackedScene" uid="uid://dpvnbb0kmbibp" path="res://StartMenu/options_information.tscn" id="14_7ig4l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbwye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_c7jko")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r61h6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_y0eh4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ine5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4ihmx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_23fof"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_kx5dy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ocd7h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_mgcqa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StartMenu" type="Node2D"]
+script = ExtResource("1_0ygfb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(566, 329)
+scale = Vector2(0.31, 0.31)
+sprite_frames = SubResource("SpriteFrames_jbwye")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(1200, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -27.0
+offset_right = 1178.0
+offset_bottom = 773.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nacho01Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(201, 422)
+rotation = -0.244346
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_r61h6")
+script = ExtResource("4_4s7u5")
+
+[node name="Shizuku01Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(355, 412)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_ine5y")
+script = ExtResource("5_w8nyp")
+
+[node name="Ai01Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(549, 422)
+rotation = 0.23911
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_23fof")
+script = ExtResource("7_726o7")
+
+[node name="HUD" parent="." instance=ExtResource("8_5l78w")]
+offset = Vector2(800, 200)
+transform = Transform2D(1, 0, 0, 1, 800, 200)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1021.0
+offset_top = 613.0
+offset_right = 1140.0
+offset_bottom = 639.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.815686)
+text = "青雀之志 V0.0.1"
+
+[node name="TitlePng" type="AnimatedSprite2D" parent="."]
+position = Vector2(390, 501)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_ocd7h")
+script = ExtResource("10_af0ry")
+
+[node name="Spectrum" parent="." instance=ExtResource("10_mcp7e")]
+
+[node name="AboutInfomation" parent="." instance=ExtResource("13_b71ts")]
+visible = false
+offset = Vector2(100, 100)
+transform = Transform2D(1, 0, 0, 1, 100, 100)
+
+[node name="OptionsInformation" parent="." instance=ExtResource("14_7ig4l")]
+visible = false
+offset = Vector2(100, 100)
+transform = Transform2D(1, 0, 0, 1, 100, 100)
+
+[connection signal="game_button_about_click" from="HUD" to="." method="_on_hud_game_button_about_click"]
+[connection signal="game_button_options_click" from="HUD" to="." method="_on_hud_game_button_options_click"]
+[connection signal="game_button_quit_click" from="HUD" to="." method="_on_hud_game_button_quit_click"]
+[connection signal="game_button_quit_click" from="HUD" to="HUD" method="_on_game_button_quit_click"]
+[connection signal="game_button_start_game_click" from="HUD" to="." method="_on_hud_game_button_start_game_click"]
+[connection signal="effect_volume_change" from="OptionsInformation" to="." method="_on_options_information_effect_volume_change"]
+[connection signal="volume_change" from="OptionsInformation" to="." method="_on_options_information_volume_change"]

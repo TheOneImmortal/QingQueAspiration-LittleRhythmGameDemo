@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbri4um7ksmfh"]
+
+[ext_resource type="Script" path="res://Game/E/Drumbeat/drumbeat.gd" id="1_bsraj"]
+[ext_resource type="Texture2D" uid="uid://by6jnctto6rf3" path="res://Game/E/Drumbeat/牌背.png" id="2_f5nq4"]
+
+[node name="drumbeat" type="Node2D"]
+scale = Vector2(0.102259, 0.102259)
+script = ExtResource("1_bsraj")
+
+[node name="牌背" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.708052, 0.708052)
+texture = ExtResource("2_f5nq4")
